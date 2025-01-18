@@ -291,6 +291,14 @@ nav ul li a:hover {
     margin-bottom: 10px;
     
 }
+.map img{
+    max-width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    
+
+}
 
 
 
