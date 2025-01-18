@@ -4,6 +4,12 @@ body {             /*css for entire body of the site*/
     padding: 0;
     background-color: #f0f0f0;
 }
+body {
+    background-image: url('images/background\ for\ all\ pages.jpeg');
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+}
 
 header {                        /*header part css*/
     background-color: #006400;
@@ -86,6 +92,61 @@ nav ul li a:hover {
     background-color: #0d140d;
     color: #f5f5f5;
 }
+
+* Hamburger Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Hide menu by default */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #2e7d32;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.menu li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Show menu when the checkbox is checked */
+#menu-toggle:checked ~ nav .menu {
+    display: flex;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+
+
+
 /*------------------------------------ 1)Homepage contents---------------------------------------------------*/
 
 .home {
@@ -93,19 +154,7 @@ nav ul li a:hover {
     padding: 50px 0; 
 }
 
-.home {  /*background image for home page*/
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 1800px; 
-    background-image: url('images/home\ .png'); /* url for about us background image*/
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; 
-    z-index: -1; 
-}
+
 
 
 .text-container {
@@ -130,8 +179,8 @@ nav ul li a:hover {
 }
 
 .hero img {             /*main image css codes*/
-    width: 1100px; 
-    height:800px;
+    width: 1000px; 
+    height:700px;
     margin:0 auto;
     
     
@@ -152,7 +201,7 @@ nav ul li a:hover {
 
     flex: 1 1 calc(30% - 20px); 
     max-width: 30%;            
-    background-color: rgb(156, 218, 156);
+    background-color:white;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -198,7 +247,7 @@ nav ul li a:hover {
 
 .animated-bullets li::before {
     content: "*"; 
-    color: #2e7d32;
+    color: #111411;
     font-size: 24px;
     position: absolute;
     left: -2px;
@@ -226,7 +275,7 @@ nav ul li a:hover {
 .branch {
     flex: 1 1 calc(30% - 20px); 
     max-width: 30%;            
-    background-color:rgb(114, 199, 114);
+    background-color:white;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -236,7 +285,7 @@ nav ul li a:hover {
 
 
 .branch img {
-    max-width: 500px;
+    max-width: 400px;
     height: 300px;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -265,9 +314,10 @@ nav ul li a:hover {
     border: 5px solid black;
     padding: 10px;
     text-align: center;
+    background-color: white;
 }
 .summary-table th,
-tfoot       {background-color:rgb(114, 199, 114);
+tfoot       {background-color:white;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: medium;
 
@@ -283,25 +333,14 @@ tfoot       {background-color:rgb(114, 199, 114);
     padding: 50px 0; 
 }
 
-.about-us-section::before {  /*background image for about us page*/
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 1500px; 
-    background-image: url('images/aboutus\ background.png'); /* url for about us background image*/
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; 
-    z-index: -1; 
-}
+
+
 /*--------------------------------3)Upcoming games page css----------------------------------------*/
 
 /* Upcoming Games Section */
 .game-grid {
     display: flex;
-    flex-direction: column; /* Column layout */
+    flex-direction: row; /* Column layout */
     align-items: center;
     gap: 20px;
     padding: 20px;
@@ -318,11 +357,12 @@ tfoot       {background-color:rgb(114, 199, 114);
     width: 100%; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color:white ;
 }
 
 .game-card img {
-    width: 150%;
-    height: 400px;
+    width: 90%;
+    height: 300px;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
 }
@@ -346,19 +386,7 @@ tfoot       {background-color:rgb(114, 199, 114);
     display: block;
     margin-top: 10px;
 }
-.upcoming{  /*background image for about us page*/
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 1900px; 
-    background-image: url('images/upcoming\ bg.png'); /* url for about us background image*/
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; 
-    z-index: -1; 
-}
+
 
 
   /*-------------------------------------------4)Gaming set up--------------------------------------------------*/
@@ -395,19 +423,7 @@ tfoot       {background-color:rgb(114, 199, 114);
     display: block; /* Hover effect */
 }
 
-.gaming_set_up { /* Background image for gaming setup page */
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 700px;
-    background-image: url('images/setup\ bg.png'); /* URL for gaming setup background image */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-    z-index: -1;
-}
+
 
 /* Dropdown container */
 .dropdown {
@@ -455,7 +471,7 @@ tfoot       {background-color:rgb(114, 199, 114);
 
 /* Change link background color on hover */
 .dropdown-content a:hover {
-    background-color: #575757;
+    background-color: black;
 }
 
 
@@ -487,19 +503,7 @@ tfoot       {background-color:rgb(114, 199, 114);
 
 
 
-.games{  /*background image for games page*/
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 1000px; 
-    background-image: url('images/games\ bg.png'); /* url for game background image*/
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; 
-    z-index: -1; 
-}
+
 
 /* Games Section */
 .games-section {
@@ -527,8 +531,8 @@ tfoot       {background-color:rgb(114, 199, 114);
 }
 
 .image-container img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -559,19 +563,6 @@ tfoot       {background-color:rgb(114, 199, 114);
 
 
 /*---------------------------------------------------6)FAQ page-------------------------------------------*/
-.FAQ {  /*background image for gaming set up page*/
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 1000px; 
-    background-image: url('images/faq\ bg.png'); /* url for FAQ background image*/
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; 
-    z-index: -1; 
-}
 
 /* FAQ Section */
 .faq-section {
@@ -648,19 +639,7 @@ question-form button:hover {
 
 /*7)-------------------------------------------7)contact page-------------------------------------------*/
 
-.contact{  /*background image for home page*/
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 1000px; 
-    background-image: url('images/home\ .png'); /* url for contact background image*/
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; 
-    z-index: -1; 
-}
+
 /* Contact Info Section */
 .contact-info {
     padding: 20px;
@@ -747,19 +726,141 @@ question-form button:hover {
 
     /*-------------------------------------------------mobile view------------------------------------*/
 
-    @media (max-width: 768px) { 
-        /* Styles for screens smaller than 768px */
-        .navigation ul {
-            flex-direction: column; 
-        }
-        .hero-content {
-            text-align: center; 
-        }
-        .products { 
-            display: flex; 
-            flex-direction: column; 
-        }
-    }
     
 
-    
+    /* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        justify-content: space-between;
+    }
+
+    .product {
+        flex: 1 1 calc(45% - 20px);
+        max-width: 45%;
+    }
+
+    .product img {
+        max-width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .product img {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .game-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .setup img {
+        width: 100%;
+        height: auto;
+    }
+
+    .summary-table table {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .summary-table th, .summary-table td {
+        padding: 8px;
+    }
+
+    .feedback-form, .question-form {
+        max-width: 100%;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+    }
+
+    .contact-methods .method {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .faq .question {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .game-card {
+        max-width: 90%;
+    }
+
+    .product img {
+        max-width: 120px;
+        height: 120px;
+    }
+
+    .setup img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .summary-table th, .summary-table td {
+        padding: 5px;
+    }
+
+    .contact-methods .method {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
