@@ -285,19 +285,11 @@ nav ul li a:hover {
 
 
 .branch img {
-    max-width: 400px;
+    max-width: 300px;
     height: 300px;
     border-radius: 5px;
     margin-bottom: 10px;
     
-}
-.map img{
-    max-width: 40px;
-    height: 30px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    
-
 }
 
 
@@ -735,56 +727,158 @@ question-form button:hover {
     /*-------------------------------------------------mobile view------------------------------------*/
 
     
-    @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            text-align: center;
-        }
-    
-        nav ul {
-            flex-direction: column;
-            width: 100%;
-        }
-    
-        .branch {
-            width: 100%;
-            text-align: center;
-        }
-    
-        .branch img {
-            width: 100%;
-        }
-    
-        .game-card img, .product img {
-            width: 100%;
-            height: auto;
-        }
-    
-        .summary-table th, .summary-table td {
-            padding: 8px;
-        }
-    
-        .footer {
-            text-align: center;
-            padding: 20px;
-        }
+
+    /* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
-    
-    @media (max-width: 480px) {
-        .logo img {
-            width: 40px;
-        }
-    
-        nav ul li a {
-            font-size: 14px;
-        }
-    
-        .product img {
-            max-width: 120px;
-            height: 120px;
-        }
-    
-        .summary-table th, .summary-table td {
-            padding: 5px;
-        }
+
+    nav ul li {
+        margin: 5px;
     }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        justify-content: space-between;
+    }
+
+    .product {
+        flex: 1 1 calc(45% - 20px);
+        max-width: 45%;
+    }
+
+    .product img {
+        max-width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .product {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        justify-content: center;
+    }
+
+    .product img {
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .game-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .setup img {
+        width: 100%;
+        height: auto;
+    }
+
+    .summary-table table {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .summary-table th, .summary-table td {
+        padding: 8px;
+    }
+
+    .feedback-form, .question-form {
+        max-width: 100%;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+    }
+
+    .contact-methods .method {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .faq .question {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .game-card {
+        max-width: 90%;
+    }
+
+    .product img {
+        max-width: 120px;
+        height: 120px;
+    }
+
+    .setup img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .summary-table th, .summary-table td {
+        padding: 5px;
+    }
+
+    .contact-methods .method {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .logo img {
+        width: 40px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .branch img {
+        max-width: 120px;
+        height: 120px;
+    }
+
+    .summary-table th, .summary-table td {
+        padding: 5px;
+    }
+}
